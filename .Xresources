@@ -1,0 +1,99 @@
+!xterm*faceName: DejaVu Sans Mono Book
+!xterm*faceSize: 10
+
+XTerm*faceName: Bitstream Vera Serif Mono
+XTerm*faceSize: 10
+UXTerm*faceName: Bitstream Vera Serif Mono
+UXTerm*faceSize: 10
+
+xterm*ScrollBar: off
+xterm*scrollVar: false
+xterm*rigthScrollBar: true
+xterm*leftScrollBar: false
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+xterm*loginshell: true
+xterm*savelines: 16384
+
+! double-click to select whole URLs 
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+xterm*borderWidth: 0
+
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+xterm.cursorUnderline: true
+xterm.cursorBlink: true
+
+urxvt.cursorUnderline: true
+urxvt.cursorBlink: true
+
+!BLK Cursor
+URxvt*color0:       #000d18
+URxvt*color8:       #000d18
+!RED Tag
+URxvt*color1:       #e89393
+URxvt*color9:       #e89393
+!GRN SpecialKey
+URxvt*color2:       #9ece9e
+URxvt*color10:       #9ece9e
+!YEL Keyword
+URxvt*color3:      #f0dfaf
+URxvt*color11:       #f0dfaf
+!BLU Number
+URxvt*color4:      #8cd0d3
+URxvt*color12:       #8cd0d3
+!MAG Precondit
+URxvt*color5:      #c0bed1
+URxvt*color13:       #c0bed1
+!CYN Float
+URxvt*color6:       #dfaf8f
+URxvt*color14:       #dfaf8f
+!WHT Search
+URxvt*color7:       #efefef
+URxvt*color15:       #efefef
+!FMT Include, StatusLine, ErrorMsg
+URxvt*colorBD:      #ffcfaf
+URxvt*colorUL:      #ccdc90
+URxvt*colorIT:      #80d4aa
+!TXT Normal, Normal, Cursor
+URxvt*foreground:    #dcdccc
+URxvt*background:   #1f1f1f
+URxvt*cursorColor:   #8faf9f
+!background: #000000
+
+!BLK Cursor
+*color0:       #000d18
+*color8:       #000d18
+!RED Tag
+*color1:       #e89393
+*color9:       #e89393
+!GRN SpecialKey
+*color2:       #9ece9e
+*color10:       #9ece9e
+!YEL Keyword
+*color3:      #f0dfaf
+*color11:       #f0dfaf
+!BLU Number
+*color4:      #8cd0d3
+*color12:       #8cd0d3
+!MAG Precondit
+*color5:      #c0bed1
+*color13:       #c0bed1
+!CYN Float
+*color6:       #dfaf8f
+*color14:       #dfaf8f
+!WHT Search
+*color7:       #efefef
+*color15:       #efefef
+!FMT Include, StatusLine, ErrorMsg
+*colorBD:      #ffcfaf
+*colorUL:      #ccdc90
+*colorIT:      #80d4aa
+!TXT Normal, Normal, Cursor
+*foreground:    #dcdccc
+*background:   #1f1f1f
+*cursorColor:   #8faf9f
+!background: #000000
+
