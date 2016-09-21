@@ -30,13 +30,13 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec uxterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -180,5 +180,5 @@ bindsym $mod+ctrl+l exec ~/.config/i3/fortune-i3lock/lock
 
 
 new_window 1pixel
-exec --no-startup-id /usr/bin/feh --bg-scale /home/aulon/Downloads/Wg6J7bu.png
-
+exec feh --bg-scale ~/Wg6J7bu.png
+exec --no-startup-id ~/.config/i3/.i3init

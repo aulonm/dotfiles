@@ -1,0 +1,1 @@
+rofi -key-run SuperL+d -key-window SuperL+x &
