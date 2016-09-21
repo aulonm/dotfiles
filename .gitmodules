@@ -1,0 +1,9 @@
+[submodule "i3/i3blocks/i3blocks-contrib"]
+	path = i3/i3blocks/i3blocks-contrib
+	url = git@github.com:vivien/i3blocks-contrib.git
+[submodule "i3/i3blocks/i3blocks-spotify"]
+	path = i3/i3blocks/i3blocks-spotify
+	url = git@github.com:firatakandere/i3blocks-spotify.git
+[submodule "i3/fortune-i3lock"]
+	path = i3/fortune-i3lock
+	url = git@github.com:TomJamesGray/fortune-i3lock.git
