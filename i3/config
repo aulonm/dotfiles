@@ -181,4 +181,4 @@ bindsym $mod+ctrl+l exec ~/.config/i3/fortune-i3lock/lock
 
 new_window 1pixel
 exec feh --bg-scale ~/Wg6J7bu.png
-exec --no-startup-id ~/.config/i3/.i3init
+exec ~/.config/i3/.i3init
