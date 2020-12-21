@@ -15,3 +15,6 @@
 
     # Current display to clipboard
     bindsym ctrl+alt+Print exec screenshots.sh active-display-to-clipboard
+
+    bindsym $mod+ctrl+shift+4 exec grim -g "$(slurp)" - | wl-copy
+

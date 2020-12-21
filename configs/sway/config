@@ -24,14 +24,14 @@ exec dbus-update-activation-environment 2>/dev/null && \
 # End of workaround
 
 # Your preferred terminal emulator
-set $term terminator
+set $term alacritty
 
 # exec --no-startup-id libinput-gestures
 
-font pango:Ubuntu 12
+#font pango:Ubuntu 12
 
 ### Focus
-focus_follows_mouse no
+focus_follows_mouse yes
 
 ### Key bindings
 #
@@ -49,7 +49,7 @@ focus_follows_mouse no
     bindsym $mod+Space exec $menu
 
     # Start output recording for screenshare
-    bindsym $mod+Shift+r exec sway-screenshare.sh
+    #bindsym $mod+Shift+r exec sway-screenshare.sh
 
     # Audio config
     # bindsym $mod+Shift+a exec pavucontrol
@@ -190,4 +190,3 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 include ~/.config/sway/conf.d/*
-# include /etc/sway/config.d/*

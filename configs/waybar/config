@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
+    "modules-center": ["way/window", "clock", "custom/spotify"],
     "modules-right": ["custom/recorder", "tray", "idle_inhibitor", "pulseaudio", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
     "sway/mode": {
         "format": " {}"
@@ -10,15 +10,7 @@
     "sway/workspaces": {
         "disable-scroll": true,
         "disable-markup": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 11'> </span>",
-            "2": "2 <span font='Font Awesome 5 Free 11'> </span>",
-            "3": "3 <span font='Font Awesome 5 Free 11'> </span>",
-            "4": "4 <span font='Font Awesome 5 Free 11'> </span>",
-            "5": "5 <span font='Font Awesome 5 Free 11'> </span>",
-            "6": "6 <span font='Font Awesome 5 Free 11'> </span>"
-        }
+        "format": "{name}"
     },
     "sway/window": {
         "max-length": 80,
@@ -36,7 +28,7 @@
         "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
         "format-icons": [""],
         "escape": true,
-        "on-click": "terminator -e htop"
+        "on-click": "alacritty -e htop"
     },
     "custom/powermenu": {
         "return-type": "json",
@@ -66,7 +58,8 @@
             "critical": 10
         },
         "tooltip": false,
-        "on-click": "gnome-power-statistics"
+        "on-click": "gnome-power-statistics",
+        "bat": "BAT0"
     },
     "network": {
         "format": "{icon}",
@@ -75,7 +68,7 @@
         "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
-        "on-click": "terminator -e ~/sway/scripts/network-manager",
+        "on-click": "alacritty -e ~/sway/scripts/network-manager",
         // "on-click": "gnome-control-center wifi",
         "tooltip": false
     },
@@ -125,6 +118,14 @@
         "exec-if": "ping wttr.in -c1",
         // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
         "on-click": "gnome-weather"
+    },
+    "custom/spotify": {
+        "interval": 5,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "on-click": "playerctl play-pause",
+        "escape": true
     },
     "idle_inhibitor": {
         "format": "{icon}",
