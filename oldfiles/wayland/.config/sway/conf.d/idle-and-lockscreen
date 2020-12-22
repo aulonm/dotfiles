@@ -1,0 +1,28 @@
+set $lock_bg ~/Pictures/backgrounds/99810.jpg
+
+bindsym $mod+ctrl+l exec swaylock -i $lock_bg
+
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
+for_window [title="YouTube"] inhibit_idle focus
+for_window [title="Meet^_*"] inhibit_idle fullscreen
+for_window [title="Meet^_*"] inhibit_idle focus
+for_window [title="Netflix^_*"] inhibit_idle fullscreen
+for_window [title="Netflix^_*"] inhibit_idle focus
+for_window [title="HBO^_*"] inhibit_idle fullscreen
+for_window [title="HBO^_*"] inhibit_idle focus
+
+
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000 -i $lock_bg' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000 -i $lock_bg'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.

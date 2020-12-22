@@ -1,0 +1,13 @@
+bindsym $mod+alt+ctrl+n input 1:1:AT_Translated_Set_2_keyboard xkb_layout no
+bindsym $mod+alt+ctrl+m input 1:1:AT_Translated_Set_2_keyboard xkb_layout us
+bindsym $mod+alt+ctrl+9 input 1130:35:HID_046a:0023 xkb_layout no
+
+# keyboard settings - defaults to norwegian
+input "*" xkb_layout no
+
+# touchpad settings
+input 1739:31251:SYNA2393:00_06CB:7A13_Touchpad {
+    click_method button_areas
+    tap enabled
+    tap_button_map lrm
+} 

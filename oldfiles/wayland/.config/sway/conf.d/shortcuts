@@ -1,0 +1,2 @@
+# screenshots
+bindsym $mod+ctrl+shift+4 exec grim -g "$(slurp)" - | wl-copy

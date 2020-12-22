@@ -1,0 +1,15 @@
+#Brightness
+bindsym XF86MonBrightnessDown exec sh -c "brightnessctl set 5%-; brightness-notification.sh"
+bindsym XF86MonBrightnessUp exec sh -c "brightnessctl set 5%+; brightness-notification.sh"
+
+#Mediaplayer
+bindsym XF86AudioPrev exec playerctl --player=spotify previous
+bindsym XF86AudioPlay exec playerctl --player=spotify play-pause
+bindsym XF86AudioNext exec playerctl --player=spotify next
+
+#Volumes
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 9%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 9%-
+bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
+
+

@@ -1,0 +1,151 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    // "modules-center": ["custom/media"],
+    "modules-center": ["sway/window", "clock", "custom/spotify"],
+    // "modules-right": ["tray", "idle_inhibitor", "custom/weather", "pulseaudio", "network", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "network", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%A %d %b - %H:%M}",
+        "tooltip": false,
+        "on-click": "gnome-calendar"
+    },
+    "custom/cpu_speed": {
+        "interval": 5,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/cpu_speed.sh",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
+        "format-icons": [""],
+        "escape": true,
+        "on-click": "alacritty -e htop"
+    },
+    "custom/powermenu": {
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/powermenu.sh",
+        "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
+        "format-icons": [""],
+        "interval": 3600,
+        "escape": true,
+        "on-click": "~/.config/sway/scripts/wofi-power.sh"
+    },
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full":  "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - Charged",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false,
+        "on-click": "gnome-power-statistics",
+	"bat": "BAT0"
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        //"on-click": "terminator -e ~/sway/scripts/network-manager",
+        "on-click": "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center wifi",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound",
+        //"on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "interval": 5,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "on-click": "playerctl play-pause",
+        "escape": true
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/storage": {
+        "format": "{} ",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+    "temperature": {
+        "format": "<span font='Font Awesome 5 Free 9'></span> {temperatureC:3}°C",
+        //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+        "hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
+        //"on-click": "terminator -e 'watch -n1 sensors'"
+        "on-click": "psensor"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "format-alt": "{alt}: {}",
+        "format-alt-click": "click-right",
+        "interval": 1800,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/weather.sh",
+        "exec-if": "ping wttr.in -c1",
+        // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
+        "on-click": "gnome-weather"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-alt": "{icon} idle {status}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "activated": "<span font='Font Awesome 5 Free 9'></span>",
+            "deactivated": "<span font='Font Awesome 5 Free 9'></span>"
+        },
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 18
+    }
+}

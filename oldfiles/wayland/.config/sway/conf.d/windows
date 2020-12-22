@@ -1,0 +1,13 @@
+# Disable window borders
+default_border pixel 1
+default_floating_border pixel 0
+
+# class		border	backgr	text	indicator	child_border
+client.focused	#be5046	#be5046	#ffffff	#be5046		#be5046
+
+# Jetbrains popup float fixes
+for_window [class="jetbrains-(.*)" title="Go to Line/Column"] floating enable
+for_window [class="jetbrains-(.*)" title="Rename"] floating enable
+for_window [class="jetbrains-(.*)" title="Open Project"] floating enable
+for_window [class="jetbrains-(.*)" title="win0"] floating enable
+
