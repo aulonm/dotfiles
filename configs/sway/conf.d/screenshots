@@ -1,0 +1,20 @@
+    # Screenshot to clipboard (all displays)
+    bindsym Print exec screenshots.sh all-to-clipboard
+
+    # Screenshot to file (all displays)
+    bindsym $mod+Print exec screenshots.sh all-to-file
+
+    # Current window to clipboard (doesn't work on floating windows tho)
+    bindsym alt+Print exec screenshots.sh window-to-clipboard
+
+    # Region-select-screenshot to clipboard
+    bindsym ctrl+Print exec screenshots.sh region-to-clipboard
+
+    # Region-select-screenshot to file
+    bindsym $mod+ctrl+Print exec screenshots.sh region-to-file
+
+    # Current display to clipboard
+    bindsym ctrl+alt+Print exec screenshots.sh active-display-to-clipboard
+
+    bindsym $mod+ctrl+shift+4 exec grim -g "$(slurp)" - | wl-copy
+

@@ -1,0 +1,65 @@
+{
+    "com.github.iboyperson.ulauncher-system": {
+        "id": "com.github.iboyperson.ulauncher-system",
+        "url": "https://github.com/iboyperson/ulauncher-system",
+        "updated_at": "2020-10-16T11:52:29.896433",
+        "last_commit": "3b2639fd106ed3ef664953eb868b80c2fb8428ea",
+        "last_commit_time": "2020-09-22T18:29:15"
+    },
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2019-09-25T10:56:14.560328",
+        "last_commit": "4734455e255a401ff7507192386ed62361cb3748",
+        "last_commit_time": "2019-05-20T18:00:00"
+    },
+    "com.github.fisadev.ulauncher-better-file-browser": {
+        "id": "com.github.fisadev.ulauncher-better-file-browser",
+        "url": "https://github.com/fisadev/ulauncher-better-file-browser",
+        "updated_at": "2019-09-25T10:56:15.838406",
+        "last_commit": "8ec8a0dda09e172de62051cd1f251816ce4af368",
+        "last_commit_time": "2019-09-06T19:20:09"
+    },
+    "com.github.nesivmi.ulauncher-translate": {
+        "id": "com.github.nesivmi.ulauncher-translate",
+        "url": "https://github.com/nesivmi/ulauncher-translate",
+        "updated_at": "2019-09-25T10:56:19.065319",
+        "last_commit": "9bf5513e57b37a3f68acce459f7c878e57e8a16d",
+        "last_commit_time": "2019-09-16T20:21:07"
+    },
+    "com.github.skykooler.ulauncher-conversion": {
+        "id": "com.github.skykooler.ulauncher-conversion",
+        "url": "https://github.com/skykooler/ulauncher-conversion",
+        "updated_at": "2019-09-25T10:56:20.539186",
+        "last_commit": "e0c707cbdaff04de8d7aecf002535176ad562c4e",
+        "last_commit_time": "2019-07-09T14:41:19"
+    },
+    "com.github.luispabon.ulauncher-virtualbox": {
+        "id": "com.github.luispabon.ulauncher-virtualbox",
+        "url": "https://github.com/luispabon/ulauncher-virtualbox",
+        "updated_at": "2020-09-23T02:29:51.294391",
+        "last_commit": "d8f495df3c7f41ee8493b207d17f06fc0372c84e",
+        "last_commit_time": "2020-09-23T01:29:15"
+    },
+    "com.github.zensoup.ulauncher-unicode": {
+        "id": "com.github.zensoup.ulauncher-unicode",
+        "url": "https://github.com/zensoup/ulauncher-unicode",
+        "updated_at": "2019-09-26T21:43:01.648274",
+        "last_commit": "0ad36c00a888e687b4bfbf76f266f1000040b337",
+        "last_commit_time": "2019-07-11T06:53:31"
+    },
+    "com.github.brpaz.ulauncher-jetbrains": {
+        "id": "com.github.brpaz.ulauncher-jetbrains",
+        "url": "https://github.com/brpaz/ulauncher-jetbrains",
+        "updated_at": "2020-06-19T13:57:40.950021",
+        "last_commit": "f650831570ae79b6d521804fb82c68a1951b6b95",
+        "last_commit_time": "2020-06-02T20:08:25"
+    },
+    "com.github.rdnetto.ulauncher-sway": {
+        "id": "com.github.rdnetto.ulauncher-sway",
+        "url": "https://github.com/rdnetto/ulauncher-sway",
+        "updated_at": "2020-07-02T12:52:36.188280",
+        "last_commit": "ca6e8365723fd444b302236fb72eded4a1378c3e",
+        "last_commit_time": "2020-07-01T16:04:10"
+    }
+}

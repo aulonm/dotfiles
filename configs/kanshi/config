@@ -1,0 +1,58 @@
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160 scale 1.5 positio
+n 0,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160 scale 1.5 positio
+n 0,0
+    output "Ancor Communications Inc ROG PG279Q HBLMQS124158" mode 2560x1440@59.9
+51000Hz scale 1 position 2560,0
+    output "Dell Inc. DELL P2715Q V48W275AAQWL" mode 3840x2160@59.997002Hz scale
+1 position 5120,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160 scale 1.5 positio
+n 3840,0
+    output "Lenovo Group Limited LEN P27u-10 0x00007D47" mode 3840x2160@59.997002
+Hz scale 1 position 0,0
+}
+
+{
+    output "Goldstar Company Ltd LG HDR 4K 0x0000C54C" mode 3840x2160@59.997002Hz
+ scale 1 position 2560,0
+    output "Dell Inc. DELL P2715Q V48W2747962L" mode 3840x2160@30.000000Hz scale
+1 position 6400,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale
+ 1.5 position 0,0
+}
+
+{
+    output "Dell Inc. DELL P2715Q V48W2747962L" mode 3840x2160@30.000000Hz scale
+1 position 0,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale
+ 1.5 position 3840,0
+}
+
+
+{
+    output "Goldstar Company Ltd LG SIGNAGE 0x00000101" mode 1920x1080@60.000000H
+z scale 1 position 0,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale
+ 1.5 position 1920,0
+}
+
+{
+    output "Sony SONY TV  *00 0x00000101" mode 3840x2100@60.000000Hz scale 1 posi
+tion 0,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3940x2160@59.997002Hz scale
+ 1.5 position 3840,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale
+ 1.5 position 0,0
+    output "Goldstar Company Ltd LG HDR 4kK 0x0000C54C" mode 3840x2160@60.000000H
+z scale 1 position 2560,0
+}
