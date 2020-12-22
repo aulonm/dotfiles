@@ -1,6 +1,6 @@
 set $lock_bg ~/Pictures/backgrounds/galen-crout-175291.jpg
 
-bindsym $mod+Alt+l exec swaylock -i $lock_bg
+bindsym $mod+ctrl+l exec swaylock -i $lock_bg
 
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
