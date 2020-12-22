@@ -1,4 +1,4 @@
-I'm basing all my sway dotfiles on Luispabon's files. I shamelessly copied all of his files and then changed stuff so that it works better with my computer and my preferences
+I'm basing all my sway dotfiles on Luispabon's files. I shamelessly copied all of his files and then changed stuff so that it works better with my computer and my preferences. The original repo is [here](https://github.com/luispabon/sway-dotfiles)
 
 # Sway dotfiles
 
