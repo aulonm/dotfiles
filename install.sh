@@ -93,6 +93,11 @@ sudo snap install spotify
 sudo snap install retroarch
 sudo snap install kubectl --classic
 sudo snap install google-cloud-sdk --classic
+sudo snap install telegram-desktop
+sudo snap install webstorm --beta --classic
+sudo snap install datagrip --beta --classic
+sudo snap install intellij-idea-ultimate --beta --classic
+
 
 # Try installing Slack. The snap version is a pain to use as links do not open on the current browser session
 # We should be able to revert to it after https://bugs.launchpad.net/snapd/+bug/1835024/ is fixed

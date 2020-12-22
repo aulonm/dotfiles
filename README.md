@@ -23,7 +23,5 @@ There are notification scripts for volume and brightness, and sway bindings for 
 ## TODO
 
  * alacritty: install, symlink config file
- * jetbrains: install webstorm/intellij
- * telegram: install and move, symlink
  * terraform: install and move, symlink
  * firebase: install
