@@ -81,7 +81,6 @@ sudo apt install \
     flat-remix \
     firefox \
     firefox-trunk \
-    solaar \
     ulauncher
 
 # Installing chrome unstable duplicates the same chrome repo created when installing chrome stable, under a difrerent file
@@ -91,13 +90,9 @@ echo -e "\n${start_green} Installing snap apps...${end_green}"
 sudo snap install chromium --channel latest/edge --classic
 sudo snap install youtube-dl
 sudo snap install spotify
-sudo snap install insomnia
 sudo snap install retroarch
 sudo snap install kubectl --classic
 sudo snap install google-cloud-sdk --classic
-sudo snap install code --classic
-sudo snap install phpstorm --classic
-sudo snap install pycharm-professional --classic
 
 # Try installing Slack. The snap version is a pain to use as links do not open on the current browser session
 # We should be able to revert to it after https://bugs.launchpad.net/snapd/+bug/1835024/ is fixed
