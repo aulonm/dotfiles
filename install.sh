@@ -46,7 +46,13 @@ sudo apt install \
     wget \
     wmctrl \
     xdotool \
-    zsh
+    zsh \
+    cmake \
+    pkg-config \
+    libfreetype6-dev \
+    libfontconfig1-dev \
+    libxcb-xfixes0-dev \
+    python3
 
 sudo apt install --no-install-recommends \
     gnome-tweaks \
@@ -145,7 +151,7 @@ fi
 
 echo -e "\n${start_green} Linking sway config folders into ~/.config... ${end_green}"
 
-folders_to_linky=("configs/sway" "configs/waybar" "configs/kanshi" "configs/rofi" "configs/mako" "assets/icons" "configs/swaylock")
+folders_to_linky=("configs/sway" "configs/waybar" "configs/kanshi" "configs/rofi" "configs/mako" "assets/icons" "configs/swaylock" "configs/alacritty")
 for folder in ${folders_to_linky[@]}; do
     if [[ ! -e "${HOME}/.config/${folder}" ]]; then
         ln -sf ${PWD}/${folder}/ "${HOME}/.config/"
@@ -197,4 +203,21 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+echo -e "\n${start_green} Installing rustup and alacritty ${end_green}"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup override set stable
+rustup update stable
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+cargo build --release
+sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+cd ..
+
+echo -e "\n${start_greenm} Installing firebase cli ${end_green}"
+curl -sL https://firebase.tools | bash
 

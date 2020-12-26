@@ -22,6 +22,4 @@ There are notification scripts for volume and brightness, and sway bindings for 
 
 ## TODO
 
- * alacritty: install, symlink config file
  * terraform: install and move, symlink
- * firebase: install
