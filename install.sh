@@ -45,7 +45,8 @@ sudo apt install \
     wl-clipboard \
     wget \
     wmctrl \
-    xdotool
+    xdotool \
+    zsh
 
 sudo apt install --no-install-recommends \
     gnome-tweaks \
@@ -183,3 +184,17 @@ sed -i 's/^#load-module module-native-protocol-tcp$/load-module module-native-pr
 # For autotiling git@github.com:nwg-piotr/autotiling.git
 pip3 install i3ipc
 ln -sf ${current}/scripts/autotiling/autotiling.py ~/bin/
+
+# Install oh-my-zsh and init
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s /bin/zsh
+
+# Move .zshrc file to home-folder
+ln -sf ${current}/config/.zshrc ~/
+
+# Install powerlevel10k theme for oh-my-zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
