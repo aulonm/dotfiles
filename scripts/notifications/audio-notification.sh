@@ -7,12 +7,12 @@ sleep 0.05
 
 getsink() {
     pacmd list-sinks |
-        awk '/index:/{i++} /* index:/{print i; exit}'
+	    awk '/index:/{i++} /\* index:/{print i; exit}'
 }
 
 
 # Get the volume and check if muted or not (STATE):
-VOLUME=`pacmd list-sinks | awk '/^\svolume:/{i++} i=='$(getsink)'{print $5; exit}' | sed -e 's/\%//'`
+VOLUME=`pacmd list-sinks | awk '/volume:/{i++} i=='$(getsink)'{print $5; exit}' | sed -e 's/\%//'`
 
 STATE=`amixer -D pulse sget Master          | \
        egrep -m 1 'Playback.*?\[o' | \
@@ -30,7 +30,7 @@ if [[ $STATE != '[off]' ]]; then
                 ICON=~/.config/icons/vol-high.png
         fi
 
-        notify-send.sh "Volume: $VOLUME%" \
+        ~/bin/notify-send.sh "Volume: $VOLUME%" \
             --replace-file=/tmp/audio-notification \
             -t 2000 \
             -i ${ICON} \
@@ -39,7 +39,7 @@ if [[ $STATE != '[off]' ]]; then
 
 # If volume is muted, display the mute sybol:
 else
-        notify-send.sh "Muted (volume: $VOLUME%)" \
+        ~/bin/notify-send.sh "Muted (volume: $VOLUME%)" \
             --replace-file=/tmp/audio-notification \
             -t 2000 \
             -i ~/.config/icons/vol-mute.png \

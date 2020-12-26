@@ -174,6 +174,9 @@ ln -sf ${current}/scripts/docker                                   ~/bin/
 ln -sf ${current}/scripts/screenshots.sh                           ~/bin/
 ln -sf ${current}/notify-send.sh/notify-*.sh                       ~/bin/
 ln -sf ${current}/ssway                                            ~/bin/
+ln -sf ${PWD}/scripts/clipboard-daemon 				   ~/.config/sway/scripts
+ln -sf ${PWD}/scripts/wofi-power.sh                                ~/.config/sway/scripts
+
 
 # Install login session
 sudo cp ${current}/ssway /usr/bin/ssway
