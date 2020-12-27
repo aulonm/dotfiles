@@ -52,7 +52,8 @@ sudo apt install \
     libfreetype6-dev \
     libfontconfig1-dev \
     libxcb-xfixes0-dev \
-    python3
+    python3 \
+    youtube-dl
 
 sudo apt install --no-install-recommends \
     gnome-tweaks \
@@ -221,6 +222,11 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 cd ..
 
-echo -e "\n${start_greenm} Installing firebase cli ${end_green}"
+echo -e "\n${start_green} Installing firebase cli ${end_green}"
 curl -sL https://firebase.tools | bash
+
+echo -e "\n${start_green} Install youtube-dl ${end_green}"
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo ln -s /usr/bin/python3 /usr/bin/python
 
