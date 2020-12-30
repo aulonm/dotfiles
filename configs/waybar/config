@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["way/window", "clock", "custom/spotify"],
-    "modules-right": ["custom/recorder", "tray", "idle_inhibitor", "pulseaudio", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
+    "modules-right": ["custom/recorder", "tray", "idle_inhibitor", "pulseaudio", "temperature", "custom/cpu_speed", "battery", "custom/weather", "custom/powermenu"],
     "sway/mode": {
         "format": " {}"
     },
