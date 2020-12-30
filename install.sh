@@ -97,7 +97,6 @@ sudo rm -f /etc/apt/sources.list.d/google-chrome-unstable.list*
 echo -e "\n${start_green} Installing snap apps...${end_green}"
 sudo snap install chromium --channel latest/edge --classic
 sudo snap install youtube-dl
-sudo snap install spotify
 sudo snap install retroarch
 sudo snap install kubectl --classic
 sudo snap install google-cloud-sdk --classic
@@ -229,4 +228,9 @@ echo -e "\n${start_green} Install youtube-dl ${end_green}"
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo ln -s /usr/bin/python3 /usr/bin/python
+
+echo -e "\n${start_green} Install spotify ${end_green}"
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 
