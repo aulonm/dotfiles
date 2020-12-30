@@ -13,8 +13,9 @@ export OK_DIR=/home/aulon/origo/scripts
 ###source $OK_DIR/scripts/bash/itas.bash
 ###eval "$(/$OK_DIR/scripts/i/bin/i init -)"
 
+export SPICETIFY_INSTALL="/home/aulon/spicetify-cli"
 
-export PATH=$HOME/.local/bin:/home/aulon/origo/scripts/k8s-scripts:$PATH
+export PATH=$HOME/.local/bin:/home/aulon/origo/scripts/k8s-scripts:$SPICETIFY_INSTALL:$PATH
 export SAML2AWS_SESSION_DURATION=14400
 export JAVA_HOME=/home/aulonm/.sdkman/candidates/java/current
 
