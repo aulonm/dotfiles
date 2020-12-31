@@ -11,7 +11,7 @@ window#waybar {
 }
 
 window#waybar.solo {
-    background: red;
+    background: rgba(0, 0, 0, 0);
 }
 
 #workspaces {
