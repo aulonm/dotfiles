@@ -1,5 +1,5 @@
 # Autotiling
-exec --no-startup-id  ~/bin/autotiling.py
+#exec --no-startup-id  ~/bin/autotiling.py
 
 #:::::::::disable_window_borders::::::::
 for_window [class="^.*"] border pixel 0
@@ -10,8 +10,8 @@ hide_edge_borders smart
 
 # class                 border  backgr. text    indicator child_border
 client.focused           #be5046 #be5046 #ffffff #be5046   #be5046
-client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
-client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+#client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+#client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
 
 #:::::i3_ gaps::::::::::::::C
 set $default_gaps_inner 12
@@ -19,7 +19,7 @@ set $default_gaps_outer 12
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 gaps top 0
-gaps bottom 10
+#gaps bottom 10
 smart_gaps on
 
 bindsym $mod+Shift+s sticky toggle
