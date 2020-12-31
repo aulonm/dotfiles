@@ -14,8 +14,8 @@ effect-greyscale
 effect-scale=0.1
 
 indicator
-indicator-radius=240
-indicator-thickness=20
+indicator-radius=100
+indicator-thickness=10
 indicator-caps-lock
 
 key-hl-color=880033

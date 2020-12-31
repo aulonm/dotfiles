@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["way/window", "clock", "custom/spotify"],
+    "modules-center": ["sway/window", "clock", "custom/spotify"],
     "modules-right": ["custom/recorder", "tray", "idle_inhibitor", "pulseaudio", "temperature", "custom/cpu_speed", "battery", "custom/weather", "custom/powermenu"],
     "sway/mode": {
         "format": " {}"
@@ -40,12 +40,12 @@
         "on-click": "~/.config/sway/scripts/wofi-power.sh"
     },
     "custom/recorder": {
-		"format": "",
-		"return-type": "json",
-		"interval": 1,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
-	},
+	"format": "",
+	"return-type": "json",
+	"interval": 1,
+	"exec": "echo '{\"class\": \"recording\"}'",
+	"exec-if": "pgrep wf-recorder"
+    },
     "battery": {
         "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
         "format-icons": ["", "", "", "", ""],
@@ -69,7 +69,6 @@
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
         "on-click": "alacritty -e ~/sway/scripts/network-manager",
-        // "on-click": "gnome-control-center wifi",
         "tooltip": false
     },
     "pulseaudio": {
@@ -103,9 +102,7 @@
     },
     "temperature": {
         "format": "<span font='Font Awesome 5 Free 9'></span> {temperatureC:3}°C",
-        //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
         "hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
-        //"on-click": "terminator -e 'watch -n1 sensors'"
         "on-click": "psensor"
     },
     "custom/weather": {
@@ -116,7 +113,6 @@
         "return-type": "json",
         "exec": "~/.config/waybar/modules/weather.sh",
         "exec-if": "ping wttr.in -c1",
-        // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
         "on-click": "gnome-weather"
     },
     "custom/spotify": {
@@ -137,7 +133,6 @@
         },
         "tooltip": false
     },
-
     "tray": {
         "icon-size": 18,
         "spacing": 18

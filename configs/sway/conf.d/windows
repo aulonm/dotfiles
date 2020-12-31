@@ -1,5 +1,5 @@
 # Autotiling
-# exec --no-startup-id  ~/bin/autotiling.py
+exec --no-startup-id  ~/bin/autotiling.py
 
 #:::::::::disable_window_borders::::::::
 for_window [class="^.*"] border pixel 0
@@ -10,18 +10,17 @@ hide_edge_borders smart
 
 # class                 border  backgr. text    indicator child_border
 client.focused           #be5046 #be5046 #ffffff #be5046   #be5046
-#client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
-#client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
-
+client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
 
 #:::::i3_ gaps::::::::::::::C
-	set $default_gaps_inner 12
-	set $default_gaps_outer 12
-	gaps inner $default_gaps_inner
-	gaps outer $default_gaps_outer
-	gaps top 0
-	# gaps bottom 10
-	smart_gaps on
+set $default_gaps_inner 12
+set $default_gaps_outer 12
+gaps inner $default_gaps_inner
+gaps outer $default_gaps_outer
+gaps top 0
+gaps bottom 10
+smart_gaps on
 
 bindsym $mod+Shift+s sticky toggle
 
@@ -29,12 +28,6 @@ bindsym $mod+Shift+s sticky toggle
 for_window [app_id="gnome-(calendar|calculator|power-statistics|control-center)"] floating enable
 for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
 for_window [app_id="(pavucontrol|psensor)"] floating enable
-for_window [app_id="evolution-alarm-notify"] floating enable
-for_window [app_id="nemo"] floating enable
-for_window [app_id="solaar"] floating enable
-for_window [app_id="evolution" title="Compose Message"] floating enable
-for_window [app_id="evolution" title="Re(.*)"] floating enable
-for_window [app_id="evolution" title="Fwd(.*)"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [app_id="mpv"] resize set 960 540
 for_window [app_id="mpv"] border pixel 0
