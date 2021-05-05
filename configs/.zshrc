@@ -1,9 +1,14 @@
+zmodload zsh/zprof
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
+export TEAM_VIZ_ROLE_DEV="arn:aws:iam::046244538885:role/oslokommune/iamadmin-SAML"
+export TEAM_VIZ_ROLE_PROD="arn:aws:iam::954042210706:role/oslokommune/iamadmin-SAML"
+export OKDATA_AWS_ROLE_DEV="arn:aws:iam::988529151833:role/oslokommune/iamadmin-SAML"
 
 
 export OK_DIR=/home/aulon/origo/scripts
@@ -15,10 +20,12 @@ export OK_DIR=/home/aulon/origo/scripts
 
 export SPICETIFY_INSTALL="/home/aulon/spicetify-cli"
 
-export PATH=$HOME/.local/bin:/home/aulon/origo/scripts/k8s-scripts:$SPICETIFY_INSTALL:$PATH
-export SAML2AWS_SESSION_DURATION=14400
-export JAVA_HOME=/home/aulonm/.sdkman/candidates/java/current
 
+export JAVA_HOME=/home/aulonm/.sdkman/candidates/java/current
+export PATH=$HOME/.local/bin:/home/aulon/origo/scripts/k8s-scripts:$SPICETIFY_INSTALL:$JAVA_HOME/bin:$PATH
+export SAML2AWS_SESSION_DURATION=14400
+
+export NODE_PATH=/usr/lib/nodejs:/usr/share/nodejs
 
 alias python='/usr/bin/python3'
 
@@ -46,7 +53,8 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,7 +114,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws battery colored-man-pages docker docker-compose emoji node npm nvm npx python ubuntu extract)
+plugins=(git aws battery colored-man-pages docker docker-compose emoji node npm nvm python ubuntu extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,3 +151,10 @@ source "$HOME/.cargo/env"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/aulon/.sdkman"
+[[ -s "/home/aulon/.sdkman/bin/sdkman-init.sh" ]] && source "/home/aulon/.sdkman/bin/sdkman-init.sh"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
