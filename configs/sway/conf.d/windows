@@ -43,5 +43,8 @@ for_window [class="jetbrains-(.*)" title="Open Project"] floating enable
 for_window [class="jetbrains-(.*)" title="win0"] floating enable
 for_window [class="jetbrains-(.*)" title="win.*"] floating enable
 
+# Chrome, Chromeium, Brave
+for_window [title="Picture-in-picture"] floating enable
+
 # XWayland default floats
 #for_window [class="[.]*"] floating enable

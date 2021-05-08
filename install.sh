@@ -66,32 +66,19 @@ sudo apt autoremove --purge \
 
 echo -e "\n${start_green} Installing third party PPAs and apps...${end_green}"
 # PPAs
-sudo add-apt-repository -y ppa:mozillateam/firefox-next
-sudo add-apt-repository -y ppa:ubuntu-mozilla-daily/ppa
 sudo add-apt-repository -y ppa:daniruiz/flat-remix
 sudo add-apt-repository -y ppa:agornostal/ulauncher
-sudo add-apt-repository -y ppa:solaar-unifying/stable
 
 # Install chrome (installs both chrome stable + repository)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
-# Azote (wallpaper manager) https://github.com/nwg-piotr/azote
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/azote/xUbuntu_19.04/ /' > /etc/apt/sources.list.d/azote.list"
-curl https://download.opensuse.org/repositories/home:/Head_on_a_Stick:/azote/xUbuntu_19.04/Release.key | sudo apt-key add -
-touch ~/.azotebg
-
 # Install all the rest of them things
 sudo apt install \
-    azote \
-    google-chrome-unstable \
     flat-remix \
-    firefox \
-    firefox-trunk \
     ulauncher
 
-# Installing chrome unstable duplicates the same chrome repo created when installing chrome stable, under a difrerent file
 sudo rm -f /etc/apt/sources.list.d/google-chrome-unstable.list*
 
 echo -e "\n${start_green} Installing snap apps...${end_green}"
@@ -151,7 +138,7 @@ fi
 
 echo -e "\n${start_green} Linking sway config folders into ~/.config... ${end_green}"
 
-folders_to_linky=("configs/sway" "configs/waybar" "configs/kanshi" "configs/rofi" "configs/mako" "assets/icons" "configs/swaylock" "configs/alacritty")
+folders_to_linky=("configs/sway" "configs/waybar" "configs/kanshi" "configs/rofi" "configs/mako" "assets/icons" "configs/swaylock" "configs/alacritty" "configs/mpv" "configs/environment.d" "configs/xdg-desktop-portal-wlr")
 for folder in ${folders_to_linky[@]}; do
     if [[ ! -e "${HOME}/.config/${folder}" ]]; then
         ln -sf ${PWD}/${folder}/ "${HOME}/.config/"
@@ -194,13 +181,6 @@ sed -i 's/^#load-module module-native-protocol-tcp$/load-module module-native-pr
 pip3 install i3ipc
 ln -sf ${current}/scripts/autotiling/autotiling.py ~/bin/
 
-# Install oh-my-zsh and init
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s /bin/zsh
-
-# Move .zshrc file to home-folder
-ln -sf ${current}/config/.zshrc ~/
-
 # Install powerlevel10k theme for oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
@@ -235,3 +215,12 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt-get update && sudo apt-get install spotify-client
 sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
+
+
+# Move .zshrc file to home-folder
+ln -sf ${current}/config/.zshrc ~/
+
+# Install oh-my-zsh and init
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s /bin/zsh
+
