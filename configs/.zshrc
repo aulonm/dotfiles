@@ -16,7 +16,8 @@ zmodload zsh/zprof
 export TEAM_VIZ_ROLE_DEV="arn:aws:iam::046244538885:role/oslokommune/iamadmin-SAML"
 export TEAM_VIZ_ROLE_PROD="arn:aws:iam::954042210706:role/oslokommune/iamadmin-SAML"
 export OKDATA_AWS_ROLE_DEV="arn:aws:iam::988529151833:role/oslokommune/iamadmin-SAML"
-
+export DATASPEILET_ROLE_DEV="arn:aws:iam::148411163591:role/oslokommune/iamadmin-SAML"
+export DATASPEILET_ROLE_PROD="arn:aws:iam::148411163591:role/oslokommune/iamadmin-SAML"
 
 export OK_DIR=/home/aulon/origo/scripts
 
@@ -27,14 +28,14 @@ export OK_DIR=/home/aulon/origo/scripts
 
 export SPICETIFY_INSTALL="/home/aulon/spicetify-cli"
 
-
 export JAVA_HOME=/home/aulonm/.sdkman/candidates/java/current
-export PATH=$HOME/.local/bin:/home/aulon/origo/scripts/k8s-scripts:$SPICETIFY_INSTALL:$JAVA_HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$SPICETIFY_INSTALL:$JAVA_HOME/bin:$PATH
 export SAML2AWS_SESSION_DURATION=14400
 
 export NODE_PATH=/usr/lib/nodejs:/usr/share/nodejs
 
-alias python='/usr/bin/python3'
+eval "$(pyenv init -)"
+
 
 #ALIAS
 alias kauth-test="$OK_DIR/k8s-scripts/k8s-auth-client.sh -u=ooo239958 -n=minside-test"
@@ -47,6 +48,8 @@ alias k8s-ns='function _k8s-ns() { kubectl config set-context $(kubectl config c
 
 # Check what type of permission by number
 alias cls="ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\"%0o \",k);print}'"
+
+alias loginshell="zsh --login --interactive"
 
 DEFAULT_USER=aulon
 

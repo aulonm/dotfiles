@@ -14,9 +14,9 @@
 }
 
 {
-    output "Goldstar Company Ltd LG HDR 4K 0x0000C54C" mode 3840x2160@59.997002Hz scale 1 position 2560,0
-    output "Dell Inc. DELL P2715Q V48W2747962L" mode 3840x2160@30.000000Hz scale 1 position 6400,0
-    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale 1.5 position 0,0
+    output "Goldstar Company Ltd LG HDR 4K 0x0000C7A8" mode 3840x2160@59.997002Hz scale 1.5 position 0,0
+    output "Dell Inc. DELL P2715Q V48W2747962L" mode 3840x2160@30.000000Hz scale 1 position 2560,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale 1.5 position 6400,0
 }
 
 {
@@ -31,11 +31,36 @@
 }
 
 {
-    output "Sony SONY TV  *00 0x00000101" mode 3840x2100@60.000000Hz scale 1 position 0,0
-    output "Sharp Corporation 0x148D 0x00000000" mode 3940x2160@59.997002Hz scale 1.5 position 3840,0
+    output "Sony SONY TV  *00 0x00000101" mode 3840x2100@29.970Hz scale 1 position 0,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3940x2160@59.997Hz scale 1.5 position 3840,0
 }
 
 {
     output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale 1.5 position 0,0
     output "Goldstar Company Ltd LG HDR 4kK 0x0000C54C" mode 3840x2160@60.000000Hz scale 1 position 2560,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997002Hz scale 1.5 position 3840,0
+    output "Dell Inc. DELL U2720Q 77HMQ83" mode 3840x2160@59.997Hz scale 1 position 0,0
+}
+
+{
+    output "Samsung Electric Company SAMSUNG 0x00000F00" mode 1920x1080@60.000Hz scale 1 position 0,0
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997Hz scale 1.5 position 1920,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997Hz scale 1.5 position 3840,0
+    output "Dell Inc. DELL P2715H GH85D6M14ZL" mode 3840x2160@59.997002Hz scale 1 position 0,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997Hz scale 1.5 position 0,0
+    output "Samsung Electric Company SAMSUNG 0x00000701" mode 1920x1080@60.000Hz scale 1 position 2560,0
+}
+
+{
+    output "Sharp Corporation 0x148D 0x00000000" mode 3840x2160@59.997Hz scale 1.5 position 0,0
+    output "Unknown BMD HDMI 0x00000001" mode 1920x1080@59.940Hz scale 1 position 2560,0
 }
